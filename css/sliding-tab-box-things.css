@@ -106,3 +106,19 @@ h1 {
  */
 .cf, .slides {
   *zoom: 1; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333333; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; }
