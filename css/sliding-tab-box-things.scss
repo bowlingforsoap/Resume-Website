@@ -18,8 +18,8 @@ $primary-color: black;
   .slide {
     position: absolute;
     top: 0; // Have to declare this for transition: top to work
-    width: calc(25% - 1em);
-    max-height: 3.5em; // Kind of a magic number
+    width: calc(33.3% - 1em); // <- tab's width
+    max-height: 3.5em; // Kind of a magic number #1 of 2
     margin: 0.5em;
     padding: 1em;
     background: darken($primary-color, 20%);
@@ -33,9 +33,9 @@ $primary-color: black;
                 top        0.25s 0.75s ease-in-out;
     
     // This is probably the jankiest part
-    @for $i from 1 through 4 {
+    @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
-        left: #{($i - 1) * 25%};
+        left: #{($i - 1) * 33.3%}; // tab's width #2 of 2
       }
     }
  
