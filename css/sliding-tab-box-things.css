@@ -78,6 +78,38 @@ h1 {
   text-align: center;
   color: white; }
 
+table, tr, td {
+  border: 0px !important; }
+
+font {
+  color: white !important;
+  font-family: 'Lato', sans-serif !important; }
+
+.content {
+  font-size: 18px !important;
+  width: 36em;
+  margin: 0 auto; }
+
+img {
+  width: 36em;
+  height: auto; }
+
+#photo {
+  width: 12em; }
+
+#animal-parts {
+  display: block !important;
+  max-width: 60% !important;
+  margin: auto !important; }
+
+.underline {
+  text-align: center;
+  border-bottom: 1px solid white; }
+
+.line-break {
+  width: 30%;
+  border-bottom: 1px solid white; }
+
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
