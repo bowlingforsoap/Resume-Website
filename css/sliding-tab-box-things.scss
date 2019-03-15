@@ -18,8 +18,8 @@ $primary-color: black;
   .slide {
     position: absolute;
     top: 0; // Have to declare this for transition: top to work
-    width: calc(33.3% - 1em); // <- tab's width
-    max-height: 3.5em; // Kind of a magic number #1 of 2
+    width: calc(33.3% - 1em); // <- tab's width #1 of 2
+    max-height: 3.5em; // Kind of a magic number
     margin: 0.5em;
     padding: 1em;
     background: darken($primary-color, 20%);
