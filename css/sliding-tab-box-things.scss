@@ -22,7 +22,9 @@ $primary-color: black;
     max-height: 3.5em; // Kind of a magic number
     margin: 0.5em;
     padding: 1em;
-    background: darken($primary-color, 20%);
+    
+    background: rgba(0,0,0,.8);
+    
     color: white;
     float: left;
     overflow: hidden;
@@ -58,6 +60,8 @@ $primary-color: black;
     width: 100%;
     max-height: 20em;
     float: none;
+    
+    background: rgba(0,0,0,.8);
     
     animation: 0s 1s delay-overflow-y forwards;
     
