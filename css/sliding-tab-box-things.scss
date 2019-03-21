@@ -119,6 +119,10 @@ font {
   margin: 0 auto;
 }
 
+#CVtopTable {
+  width: 100%;
+}
+
 img {
   width: 36em;
   height: auto;
@@ -136,6 +140,7 @@ img {
 
 #photo {
   width: 12em;
+  float: right;
 }
 
 #animal-parts {

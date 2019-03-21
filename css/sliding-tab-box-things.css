@@ -90,6 +90,9 @@ font {
   width: 36em;
   margin: 0 auto; }
 
+#CVtopTable {
+  width: 100%; }
+
 img {
   width: 36em;
   height: auto;
@@ -106,7 +109,8 @@ img:hover {
   -webkit-transform: scale(1.01); }
 
 #photo {
-  width: 12em; }
+  width: 12em;
+  float: right; }
 
 #animal-parts {
   display: block !important;
