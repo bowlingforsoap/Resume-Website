@@ -3,6 +3,9 @@
 //$primary-color: hsl(350, 70, 60);
 $primary-color: black;
 
+@-webkit-keyframes delay-overflow-y {
+  to { overflow-y: auto; }
+}
 @keyframes delay-overflow-y {
   to { overflow-y: auto; }
 }
@@ -28,6 +31,10 @@ $primary-color: black;
     color: white;
     float: left;
     overflow: hidden;
+    // For Edge
+    @supports (-ms-ime-align: auto) {
+      overflow-y: auto;
+    }
     
     transition: max-height 0.25s       ease-in-out,
                 width      0.25s 0.25s ease-in-out,
@@ -62,7 +69,8 @@ $primary-color: black;
     float: none;
     
     background: rgba(0,0,0,.8);
-    
+  
+    -webkit-animation: 0s 1s delay-overflow-y forwards;
     animation: 0s 1s delay-overflow-y forwards;
     
     transition: top        0.25s 1s    ease-in-out,

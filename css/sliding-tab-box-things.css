@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300|Oswald);
+@-webkit-keyframes delay-overflow-y {
+  to {
+    overflow-y: auto; } }
 @keyframes delay-overflow-y {
   to {
     overflow-y: auto; } }
@@ -19,6 +22,9 @@
     float: left;
     overflow: hidden;
     transition: max-height 0.25s       ease-in-out, width      0.25s 0.25s ease-in-out, left       0.25s 0.5s  ease-in-out, top        0.25s 0.75s ease-in-out; }
+    @supports (-ms-ime-align: auto) {
+      .slides .slide {
+        overflow-y: auto; } }
     .slides .slide:nth-child(1) {
       left: 0%; }
     .slides .slide:nth-child(2) {
@@ -41,6 +47,7 @@
     max-height: 20em;
     float: none;
     background: rgba(0, 0, 0, 0.8);
+    -webkit-animation: 0s 1s delay-overflow-y forwards;
     animation: 0s 1s delay-overflow-y forwards;
     transition: top        0.25s 1s    ease-in-out, left       0.25s 1.25s ease-in-out, width      0.25s 1.5s  ease-in-out, max-height 0.25s 1.75s ease-in-out; }
     .slides .slide.active a {
