@@ -9,9 +9,13 @@ $('.slide a').click(function () {
   $(this).closest('.slide').addClass('active');
   
   // Init Unity animations
-  var btnNum = Number($('.slide.active').contents("span").text());
-  console.log("button #" + btnNum + " was pressed");
-  gameInstance.SendMessage("Main Camera", "ChangeState", btnNum);
+  try {
+    var btnNum = Number($('.slide.active').contents("span").text());
+    console.log("button #" + btnNum + " was pressed");
+    gameInstance.SendMessage("Main Camera", "ChangeState", btnNum);
+  } catch (error) {
+    console.log(error);
+  }
   
   return false;
 });
