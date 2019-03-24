@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,19 +11,27 @@
   <!-- Unity -->
   <link rel="shortcut icon" href="Unity/TemplateData/favicon.ico">
   <link rel="stylesheet" href="Unity/TemplateData/style.css">
+  <link rel="stylesheet" href="css/customPreload.css">
+  <script src="js/customPreload.js"></script>
   <script src="Unity/TemplateData/UnityProgress.js"></script>
   <script src="Unity/Build/UnityLoader.js"></script>
   <script>
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build/webgl-build.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Unity/Build/webgl-build.json", {onProgress: Progress});
   </script>
-  </head>
-  <body>
+</head>
+<body>
+  <div id="loadingBox">
+    <div id="bgBar"></div>
+    <div id="progressBar"></div>
+    <p id="loadingInfo">Loading...</p>
+  </div>
+
 <!-- Slidey things -->
 <div class="container">
     <h1>Strelchenko | Creative Coder</h1>
     <div class="slides">
     <div class="slide"> <a href="#">CV</a> <span style="display: none">1</span>
-        <div class="content">
+        <div class="content"> 
         <!-- <table width="1164" cellpadding="7" cellspacing="0" style="page-break-before: always">
             <col width="753"/>
             <col width="383"/>
@@ -50,20 +58,16 @@
               </p></td>
           </tr>
           </table> -->
-          <table id="CVtopTable">
+        <table id="CVtopTable">
             <tr>
-              <td>
-                <p>Vadym Strelchenko</p>
+            <td><p>Vadym Strelchenko</p>
                 <p>8 Rathausplatz, Garching 85748, Germany</p>
                 <p>Tel.: +49 177 54 55 168, +38 098 449 54 60</p>
-                <p> E-mail, Skype: strelchenkovadym@gmail.com</p>
-              </td>
-              <td>
-                <img id="photo" src="AfterMasterThesisCV2_clean_html_f0d535deec112edd.jpg" name="Image1"/>
-              </td>
-            </tr>
+                <p> E-mail, Skype: strelchenkovadym@gmail.com</p></td>
+            <td><img id="photo" src="AfterMasterThesisCV2_clean_html_f0d535deec112edd.jpg" name="Image1"/></td>
+          </tr>
           </table>
-          <p/>
+        <p/>
         <p class="underline" align="left" style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0.14in; line-height: 115%"> <font color="#000000"><font face="Calibri, serif"><font size="2" style="font-size: 11pt"><b>PROFESSIONAL
           TIMELINE</b></font></font></font></p>
         <table width="100%" cellpadding="7" cellspacing="0">
