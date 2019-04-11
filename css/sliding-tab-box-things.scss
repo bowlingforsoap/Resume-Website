@@ -4,10 +4,10 @@
 $primary-color: black;
 
 @-webkit-keyframes delay-overflow-y {
-  to { overflow-y: auto; }
+  to { overflow: auto; }
 }
 @keyframes delay-overflow-y {
-  to { overflow-y: auto; }
+  to { overflow: auto; }
 }
 
 /*@keyframes disable-overflow-y {
@@ -21,7 +21,8 @@ $primary-color: black;
   .slide {
     position: absolute;
     top: 0; // Have to declare this for transition: top to work
-    width: calc(33.3% - 1em); // <- tab's width #1 of 2
+    width: calc(33% - 1em); // <- tab's width #1 of 2
+//    width: calc(50% - 1em); // <- tab's width #1 of 2
     max-height: 3.5em; // Kind of a magic number
     margin: 0.5em;
     padding: 1em;
@@ -42,8 +43,10 @@ $primary-color: black;
                 top        0.25s 0.75s ease-in-out;
     
     // This is probably the jankiest part
+//    @for $i from 1 through 2 {
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
+//        left: #{($i - 1) * 50%}; // tab's width #2 of 2
         left: #{($i - 1) * 33.3%}; // tab's width #2 of 2
       }
     }

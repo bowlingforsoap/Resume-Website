@@ -3,6 +3,7 @@ $('.slide a').click(function () {
   var active = document.getElementsByClassName("slide active")[0];
   if (active) {
     active.scrollTop = 0;
+    active.scrollLeft = 0;
   }
   
   $('.slide.active').removeClass('active');

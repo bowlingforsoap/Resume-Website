@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300|Oswald);
 @-webkit-keyframes delay-overflow-y {
   to {
-    overflow-y: auto; } }
+    overflow: auto; } }
 @keyframes delay-overflow-y {
   to {
-    overflow-y: auto; } }
+    overflow: auto; } }
 /*@keyframes disable-overflow-y {
   to { overflow-y: hidden; }
 }*/
@@ -13,7 +13,7 @@
   .slides .slide {
     position: absolute;
     top: 0;
-    width: calc(33.3% - 1em);
+    width: calc(33% - 1em);
     max-height: 3.5em;
     margin: 0.5em;
     padding: 1em;
